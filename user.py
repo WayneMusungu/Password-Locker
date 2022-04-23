@@ -1,3 +1,6 @@
+import string
+import random
+
 class User: 
     '''
     We create a class that generates new instances of users
@@ -72,5 +75,7 @@ class User:
             if user.username == username:
                 return True
         return False
+    
+    
         
    
