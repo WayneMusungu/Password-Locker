@@ -72,11 +72,24 @@ class TestUser(unittest.TestCase):
         '''
         test to check if we can find a user by their username and display information
         '''
+        
         self.new_user.save_user()
         test_user = User("Pablo","Zabaleta","zaba@qq.com","Pablo","09876")#New contact
         test_user.save_user()
         found_user = User.find_by_username("Pablo")
         self.assertEqual(found_user.username, test_user.username)
+        
+    def test_user_exists(self):
+        '''
+        test to check if we can return a Boolean if we cannot find the user
+        '''
+        
+        self.new_user.save_user()
+        test_user = User("Pablo","Zabaleta","zaba@qq.com","Pablo","09876")#New contact
+        test_user.save_user()
+        
+        user_exits = User.user_exist("Pablo")
+        self.assertTrue(user_exits)
         
    
 if __name__ == '__main__':
