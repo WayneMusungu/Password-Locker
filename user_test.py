@@ -1,4 +1,6 @@
-from cgi import test
+# from cgi import test
+
+# import pyperclip
 import unittest #  We import the unittest module
 from user import User
 
@@ -90,7 +92,14 @@ class TestUser(unittest.TestCase):
         
         user_exits = User.user_exist("Pablo")
         self.assertTrue(user_exits)
+     
+     
+    def test_display_all_users(self):
+        '''
+        method that returns a list of all users saved
+        '''
         
+        self.assertEqual(User.display_users(), User.user_list)
    
 if __name__ == '__main__':
     unittest.main()
