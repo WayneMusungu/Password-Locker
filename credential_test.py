@@ -46,6 +46,20 @@ class TestCredentials(unittest.TestCase):
         test_credential = Credentials("Snapchat","Whitney","blindislove")
         test_credential.save_credentials()
         self.assertEqual(len(Credentials.credentials_list),2)
+        
+        
+    def test_delete_credential(self):
+        '''
+        test_delete_credential to test if we can remove credentials from our
+        credential list
+        '''
+        self.new_credential.save_credentials()
+        test_credential = Credentials("Snapchat","Whitney","blindislove")
+        test_credential.save_credentials()
+
+        self.new_credential.delete_credentials()
+        self.assertEqual(len(Credentials.credentials_list),1)
+
 
     
         
