@@ -53,7 +53,7 @@ class TestUser(unittest.TestCase):
         '''
         
         self.new_user.save_user()
-        test_user = User("Pablo","Zabaleta","zaba@qq.com","Pablo","09876") #New contact
+        test_user = User("Pablo","Zabaleta","zaba@qq.com","Pablo","09876") #New user
         test_user.save_user()
         self.assertEqual(len(User.user_list),2)
         
@@ -63,7 +63,7 @@ class TestUser(unittest.TestCase):
         '''
         
         self.new_user.save_user()
-        test_user = User("Pablo","Zabaleta","zaba@qq.com","Pablo","09876")#New contact
+        test_user = User("Pablo","Zabaleta","zaba@qq.com","Pablo","09876")#New user
         test_user.save_user() 
         
         self.new_user.delete_user()
@@ -76,7 +76,7 @@ class TestUser(unittest.TestCase):
         '''
         
         self.new_user.save_user()
-        test_user = User("Pablo","Zabaleta","zaba@qq.com","Pablo","09876")#New contact
+        test_user = User("Pablo","Zabaleta","zaba@qq.com","Pablo","09876")#New user
         test_user.save_user()
         found_user = User.find_by_username("Pablo")
         self.assertEqual(found_user.username, test_user.username)
@@ -87,7 +87,7 @@ class TestUser(unittest.TestCase):
         '''
         
         self.new_user.save_user()
-        test_user = User("Pablo","Zabaleta","zaba@qq.com","Pablo","09876")#New contact
+        test_user = User("Pablo","Zabaleta","zaba@qq.com","Pablo","09876")#New user
         test_user.save_user()
         
         user_exits = User.user_exist("Pablo")

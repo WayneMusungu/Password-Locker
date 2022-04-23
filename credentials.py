@@ -34,6 +34,21 @@ class Credentials:
         delete_credential method deletes saved credentials from the credentials_list
         '''
         Credentials.credentials_list.remove(self)
+        
+    @classmethod
+    def find_by_account(cls,account):
+        '''
+        Method that takes in a user's account and returns credentials that matches that
+        account.
+
+        Args:
+            account: account to search for
+        Returns:
+            Credentials that matches the account.
+        '''
+        for credential in cls.credentials_list:
+            if credential.account == account:
+                return credential
 
 
 

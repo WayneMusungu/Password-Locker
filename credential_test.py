@@ -43,7 +43,7 @@ class TestCredentials(unittest.TestCase):
         objects to our credential_list
         '''
         self.new_credential.save_credentials()
-        test_credential = Credentials("Snapchat","Whitney","blindislove")
+        test_credential = Credentials("Snapchat","Whitney","blindislove")#New credential
         test_credential.save_credentials()
         self.assertEqual(len(Credentials.credentials_list),2)
         
@@ -54,11 +54,25 @@ class TestCredentials(unittest.TestCase):
         credential list
         '''
         self.new_credential.save_credentials()
-        test_credential = Credentials("Snapchat","Whitney","blindislove")
+        test_credential = Credentials("Snapchat","Whitney","blindislove")#New credential
         test_credential.save_credentials()
 
         self.new_credential.delete_credentials()
         self.assertEqual(len(Credentials.credentials_list),1)
+        
+        
+    def test_find_credential_by_account(self):
+        '''
+        test to check if we can find a credential entry by account name and display
+        the details of the credential
+        '''
+        self.new_credential.save_credentials()
+        test_credential = Credentials("Snapchat","Whitney","blindislove")#New credential
+        test_credential.save_credentials()
+
+        found_credential = Credentials.find_by_account("Snapchat")
+
+        self.assertEqual(found_credential.account,test_credential.account)
 
 
     
