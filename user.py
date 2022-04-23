@@ -31,4 +31,4 @@ class User:
         save_user method saves contact objects into user_list
         '''
         
-        User.user_list.append(list)
+        User.user_list.append(self)
