@@ -1,5 +1,5 @@
 import string
-import random
+from random import choice
 
 class User: 
     '''
@@ -76,6 +76,13 @@ class User:
                 return True
         return False
     
-    
+    def generate_random_password(length = 10 ):
+        '''
+        Method that generates a random alphanumeric and special characters
+        '''
+        
+        password = string.digits + string.ascii_lowercase + string.ascii_uppercase + "~!@#$%^&*`"
+        
+        return ''.join(choice(password) for i in range(length))
         
    
