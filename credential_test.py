@@ -86,6 +86,13 @@ class TestCredentials(unittest.TestCase):
         credential_exists = Credentials.credential_exist("Snapchat")
 
         self.assertTrue(credential_exists)
+        
+    def test_display_all_credentials(self):
+        '''
+        method that returns a list of all credentials saved
+        '''
+        self.assertEqual(Credentials.display_credentials(),Credentials.credentials_list)
+        
 
 
     
