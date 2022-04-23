@@ -73,6 +73,19 @@ class TestCredentials(unittest.TestCase):
         found_credential = Credentials.find_by_account("Snapchat")
 
         self.assertEqual(found_credential.account,test_credential.account)
+        
+        
+    def test_credential_exist(self):
+        '''
+        test to check if we can return a Boolean if we cannot find the credential.
+        '''
+        self.new_credential.save_credentials()
+        test_credential = Credentials("Snapchat","Whitney","blindislove")#New credential
+        test_credential.save_credentials()
+
+        credential_exists = Credentials.credential_exist("Snapchat")
+
+        self.assertTrue(credential_exists)
 
 
     
