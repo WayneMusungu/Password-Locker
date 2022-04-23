@@ -1,3 +1,4 @@
+from cgi import test
 import unittest #  We import the unittest module
 from user import User
 
@@ -51,7 +52,11 @@ class TestUser(unittest.TestCase):
         
         self.new_user.save_user()
         test_user = User("Pablo","Zabaleta","zaba@qq.com","Pablo","09876")
+        test_user.save_user()
+        self.assertEqual(len(User.user_list),2)
         
+        
+   
 if __name__ == '__main__':
     unittest.main()
     
