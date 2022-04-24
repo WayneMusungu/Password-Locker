@@ -11,6 +11,12 @@ def create_user(fname,lname,uname,password):
     new_user = User(fname,lname,uname,password)
     return new_user
 
+def save_users(user):
+    '''
+    Function to dave a user
+    '''
+    user.save_user()
+
 def login_user(username,password):
     '''
     Function that allows an existing user to login
