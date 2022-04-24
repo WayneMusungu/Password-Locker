@@ -15,10 +15,7 @@ def save_users(user):
     '''
     Function to dave a user
     '''
-    user.save_user()
-    
-    
-    
+    user.save_user()  
     
 def login_user(username,password):
     '''
@@ -27,12 +24,6 @@ def login_user(username,password):
     new_entry = User.authenticate_user(username,password)
     return new_entry
 
-# def login_user(username,password):
-#     '''
-#     Function that allows an existing user to login
-#     '''
-#     new_entry = User.verify_user(username,password)
-#     return new_entry
 
 def del_user(user):
     '''
@@ -45,3 +36,9 @@ def find_user(username):
     Function that find a user by their username and returns the user
     '''
     return User.find_by_username(username)
+
+def display_user():
+    '''
+    Function that returns all the saved users
+    '''
+    return User.display_users()
