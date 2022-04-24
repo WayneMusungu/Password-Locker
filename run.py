@@ -129,7 +129,7 @@ def main():
         password = input("password: ")
         login_user(uname,password)
         print('\n')
-        print(f"Hello {uname}.Welcome to the Password locker APP 😍😍")
+        print(f"Hello {uname}!! Welcome to the Password locker APP 😍😍")
         print('\n')
        
         while True:
@@ -193,7 +193,7 @@ def main():
                     print("_" * 50)
                     search_credential.delete_credentials()
                     print('\n')
-                    print(f"Your stored credentials for : {search_credential.account} successfully deleted")
+                    print(f"New Credential:{search_credential.credential}Your stored credentials for : {search_credential.account} successfully deleted")
                     print('\n')
                 else:
                     print("The Credential does not exist")
