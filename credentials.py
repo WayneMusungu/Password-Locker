@@ -1,3 +1,5 @@
+
+import pyperclip
 import string
 from random import choice
 class Credentials:
@@ -85,5 +87,10 @@ class Credentials:
         password = string.digits + string.ascii_lowercase + string.ascii_uppercase + "~!@#$%^&*`"
         
         return ''.join(choice(password) for i in range(length))
+    
+    @classmethod
+    def copy_username(cls,account):
+        credential_found = Credentials.find_by_account(account)
+        pyperclip.copy(credential_found.username)
 
 

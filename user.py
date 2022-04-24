@@ -1,3 +1,4 @@
+import pyperclip
 import string
 from random import choice
 
@@ -106,5 +107,11 @@ class User:
         password = string.digits + string.ascii_lowercase + string.ascii_uppercase + "~!@#$%^&*`"
         
         return ''.join(choice(password) for i in range(length))
+    
+    @classmethod
+    def copy_email(cls,username):
+        user_found = User.find_by_username(username)
+        pyperclip.copy(user_found.email)
+    
         
    

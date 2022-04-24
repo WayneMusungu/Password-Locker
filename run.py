@@ -3,6 +3,7 @@
 from user import User
 from credentials import Credentials
 
+
 # Create user function
 def create_user(fname,lname,email,uname,password):
     '''
