@@ -25,7 +25,7 @@ def login_user(username,password):
     return new_entry
 
 
-def del_user(user):
+def delete_user(user):
     '''
     Function to delete a user
     '''
@@ -50,3 +50,33 @@ def create_credential(account,username,password):
     '''
     new_credential = Credentials(account,username,password)
     return new_credential
+
+def save_credential(credentials):
+    '''
+    Function to save credentials
+    '''
+    credentials.save_credentials()
+    
+def delete_credentials(credentials):
+    '''
+    Function to delete credentials
+    '''
+    credentials.delete_credentials()
+    
+def find_credentials(account):
+    '''
+    Function that finds a Credentials account name and returns the credential
+    '''
+    return Credentials.find_by_account(account)
+
+def display_credentials():
+    '''
+    Function that returns all the saved credentials
+    '''
+    return Credentials.display_credentials()
+
+def generate_password():
+    '''
+    Generates a random password for the user
+    '''
+    
