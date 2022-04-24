@@ -16,16 +16,32 @@ def save_users(user):
     Function to dave a user
     '''
     user.save_user()
-
+    
+    
+    
+    
 def login_user(username,password):
     '''
     Function that allows an existing user to login
     '''
-    new_entry = User.verify_user(username,password)
+    new_entry = User.authenticate_user(username,password)
     return new_entry
+
+# def login_user(username,password):
+#     '''
+#     Function that allows an existing user to login
+#     '''
+#     new_entry = User.verify_user(username,password)
+#     return new_entry
 
 def del_user(user):
     '''
     Function to delete a user
     '''
     user.delete_user()
+    
+def find_user(username):
+    '''
+    Function that find a user by their username and returns the user
+    '''
+    return User.find_by_username(username)

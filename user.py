@@ -27,7 +27,8 @@ class User:
         self.email = email
         self.username = username
         self.password = password
-        
+      
+    
     def save_user(self):
         
         '''
@@ -36,6 +37,19 @@ class User:
         
         User.user_list.append(self)
         
+    
+    @classmethod
+    def authenticate_user(cls,username,password):
+        '''
+        Method to authenticate the user 
+        '''
+        verify_user = ""
+        for user in User.user_list:
+            if(user.username == username and user.password == password):
+                verify_user == user.name
+            return verify_user
+        
+
     def delete_user(self):
         '''
         delete_user method deletes a saved user from the user_list
