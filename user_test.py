@@ -1,6 +1,6 @@
 # from cgi import test
 
-# import pyperclip
+import pyperclip
 import unittest #  We import the unittest module
 from user import User
 
