@@ -1,6 +1,5 @@
 #!/usr/bin/env python3.8
 
-
 from user import User
 from credentials import Credentials
 
@@ -127,10 +126,11 @@ def main():
         print('_' * 60)
         uname = input("Username: ")
         password = input("password: ")
-        login = login_user(uname,password)
-        if login_user == login:
-            print(f"Hello {uname}.Welcome to the Password locker APP 😍😍")
-            print('\n')
+        login_user(uname,password)
+        print('\n')
+        print(f"Hello {uname}.Welcome to the Password locker APP 😍😍")
+        print('\n')
+       
         while True:
             print("Use these short codes:\n (1) CNC ----  Create New Credentials\n (2) DC ---- Display Credentials\n (3) FC ----Find Credentials\n (4) GRP ---- Generate Random Password\n (5) DEL ---- Delete Credential\n (6) EX ----Exit the application\n")
             short_code = input().lower().strip()
@@ -138,7 +138,7 @@ def main():
                 print("Create New Credential")
                 print("_"*20)
                 print("Account name:")
-                account = input().lower()
+                account = input().capitalize()
                 print("Your Account username:")
                 username = input()
                 while True:
