@@ -23,3 +23,9 @@ def login_user(username,password):
     '''
     new_entry = User.verify_user(username,password)
     return new_entry
+
+def del_user(user):
+    '''
+    Function to delete a user
+    '''
+    user.delete_user()
