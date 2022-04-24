@@ -3,7 +3,7 @@
 from user import User
 from credentials import Credentials
 
-
+# Create user function
 def create_user(fname,lname,uname,password):
     '''
     Function to create a new user
@@ -42,3 +42,11 @@ def display_user():
     Function that returns all the saved users
     '''
     return User.display_users()
+
+# Create credential functions
+def create_credential(account,username,password):
+    '''
+    Function to create a new credential
+    '''
+    new_credential = Credentials(account,username,password)
+    return new_credential
