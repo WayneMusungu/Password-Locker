@@ -43,7 +43,7 @@ This is a password locker application built using Python Programming Language th
        $ ./run.py
 * To run test for the application in the vs code 
 
-       `$ python 3.8 run.py`
+       $ python 3.8 run.py
        
 
 ## Dependencies
