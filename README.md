@@ -42,7 +42,8 @@ This is a password locker application built using Python Programming Language th
        $ chmod +x run.py
        $ ./run.py
 * To run test for the application in the vs code 
-       $ ./run.py
+
+       `$ python 3.8 run.py`
        
 
 ## Dependencies
