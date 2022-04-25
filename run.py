@@ -127,13 +127,12 @@ def main():
         print('_' * 60)
         uname = input("Username: ")
         password = input("password: ")
-        login_user(uname,password)
         print('\n')
         print(f"Hello {uname}!! Welcome to the Password locker APP 😍😍")
         print('\n')
        
         while True:
-            print("Use these short codes:\n (1) CNC ----  Create New Credentials\n (2) DC ---- Display Credentials\n (3) FC ----Find Credentials\n (4) GRP ---- Generate Random Password\n (5) DEL ---- Delete Credential\n (6) EX ----Exit the application\n")
+            print("Use these short codes:\n (1) CNC ----  Create New Credentials\n (2) DC ---- Display Credentials\n (3) GRP ---- Generate Random Password\n (4) DEL ---- Delete Credential\n (5) EX ----Exit the application\n")
             short_code = input().lower().strip()
             if short_code == "cnc":
                 print("Create New Credential")
@@ -172,19 +171,6 @@ def main():
                         print('_' * 30)
                 else:
                     print("Whoopsie!!! It seems you don't have any credentials saved yet 💔")
-
-            elif short_code == "fc":
-                print("Enter the Account Name you want to search for")
-                search_name = input().lower()
-                if find_credentials(search_name):
-                    search_credential = find_credentials(search_name)
-                    print(f"Account Name: {search_credential.account}")
-                    print('-' * 50)
-                    print(f"Username: {search_credential.username} Password :{search_credential.password}")
-                    print('-' * 50)
-                else:
-                    print("The Credential does not exist🤦‍♂🤡 ")
-                    print('\n')
             elif short_code == "del":
                 print("Enter the Account Name Credentials that you want to delete")
                 search_name = input().lower()
