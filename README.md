@@ -28,7 +28,7 @@ This is a password locker application built using Python Programming Language th
 
 #### Cloning
 
-* Open Terminal {Ctrl+Alt+T}
+* Open Terminal ``Ctrl+Alt+T``
 
 * git clone `https://github.com/WayneMusungu/Password-Locker.git`
 
